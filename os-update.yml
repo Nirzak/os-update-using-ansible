@@ -1,6 +1,7 @@
 - name: Updating all packages on CentOS-RedHat-OracleLinux Servers
   hosts: all
   become: yes
+  become_method: sudo
   become_user: root
   tasks:
     - name: Update yum repo and package cache
